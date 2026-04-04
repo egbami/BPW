@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bankole Primaël — Backend Python Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div id="cd"></div>
+<div id="cr"></div>
+
+<!-- NAV -->
+<div id="mn">
+  <button id="mc">✕</button>
+  <a href="#hero" class="ml" data-k="nh">Home</a>
+  <a href="#about" class="ml" data-k="na">About</a>
+  <a href="#contact" class="ml" data-k="nc">Contact</a>
+</div>
+<nav id="nav">
+  <a href="#hero" class="nl">BPW</a>
+  <div class="nls">
+    <a href="#hero" class="na act" data-k="nh">Home</a>
+    <a href="#about" class="na" data-k="na">About</a>
+    <a href="#contact" class="na" data-k="nc">Contact</a>
+  </div>
+  <div class="nr">
+    <div class="lsw">
+      <button class="lb on" data-l="en">EN</button>
+      <button class="lb" data-l="fr">FR</button>
+      <button class="lb" data-l="ja">日</button>
+    </div>
+    <button class="nhb" id="nhb" aria-label="Menu">
+      <svg width="22" height="14" viewBox="0 0 22 14">
+        <rect width="22" height="1.5" fill="black"/>
+        <rect y="12.5" width="22" height="1.5" fill="black"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HOME -->
+<section id="hero">
+  <canvas id="hcv"></canvas>
+  <div class="w">
+    <div class="hi">
+      <div class="ht"><span class="hd"></span><span data-k="htag">Backend Python Developer · Bénin</span></div>
+      <h1 class="hn">
+        <span class="rl"><span class="rs">BANKOLE</span></span>
+        <span class="rl rl2"><span class="rs">PRIMAËL</span></span>
+      </h1>
+      <div class="hb">
+        <p class="hs" data-k="hsub">Building fast, purposeful APIs and backend systems that actually work.</p>
+        <a href="#projects" class="hc">
+          <span class="hct" data-k="hcta">See work</span>
+          <span class="hci">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="sc"><div class="scl"></div><span class="sct">scroll</span></div>
+</section>
+
+<div id="mq" aria-hidden="true">
+  <div class="mqw">
+    <span class="mqi">FastAPI<span class="mqd">·</span></span>
+    <span class="mqi">Django<span class="mqd">·</span></span>
+    <span class="mqi">Flask<span class="mqd">·</span></span>
+    <span class="mqi">Python<span class="mqd">·</span></span>
+    <span class="mqi">Pandas<span class="mqd">·</span></span>
+    <span class="mqi">PostgreSQL<span class="mqd">·</span></span>
+    <span class="mqi">Pytest<span class="mqd">·</span></span>
+    <span class="mqi">REST APIs<span class="mqd">·</span></span>
+    <span class="mqi">SQLAlchemy<span class="mqd">·</span></span>
+    <span class="mqi">BeautifulSoup<span class="mqd">·</span></span>
+    <span class="mqi">Prompt Engineering<span class="mqd">·</span></span>
+    <span class="mqi">FastAPI<span class="mqd">·</span></span>
+    <span class="mqi">Django<span class="mqd">·</span></span>
+    <span class="mqi">Flask<span class="mqd">·</span></span>
+    <span class="mqi">Python<span class="mqd">·</span></span>
+    <span class="mqi">Pandas<span class="mqd">·</span></span>
+    <span class="mqi">PostgreSQL<span class="mqd">·</span></span>
+    <span class="mqi">Pytest<span class="mqd">·</span></span>
+    <span class="mqi">REST APIs<span class="mqd">·</span></span>
+    <span class="mqi">SQLAlchemy<span class="mqd">·</span></span>
+    <span class="mqi">BeautifulSoup<span class="mqd">·</span></span>
+    <span class="mqi">Prompt Engineering<span class="mqd">·</span></span>
+  </div>
+</div>
+
+<section id="projects">
+  <div class="w">
+    <p class="sl" data-k="plbl">Selected Work</p>
+    <h2 class="st" data-k="ptit">Projects</h2>
+    <div class="bento">
+      <div class="bc b1">
+        <div class="bc-in">
+          <span class="bnum">01</span>
+          <div>
+            <h3 class="btit">Qautomate</h3>
+            <p class="bdesc" data-k="p1">Automated intelligence aggregator — weather, crypto & breaking news piped to your inbox every 4 hours.</p>
+            <div class="btags"><span class="btag">Python</span><span class="btag">Schedule</span><span class="btag">SMTP</span></div>
+          </div>
+        </div>
+        <a href="https://github.com/Primael-dev/Qautomate.git" target="_blank" rel="noopener" class="blink" style="color:#fff;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+      <div class="bc b2">
+        <div class="bc-in">
+          <span class="bnum">02</span>
+          <div>
+            <h3 class="btit">Weather App</h3>
+            <p class="bdesc" data-k="p2">Full-stack Flask weather app. Any city worldwide, weekly forecasts, ETL + SQLite persistence.</p>
+            <div class="btags"><span class="btag">Flask</span><span class="btag">SQLite</span><span class="btag">OpenMeteo</span></div>
+          </div>
+        </div>
+        <a href="https://github.com/Primael-dev/Weather-App.git" target="_blank" rel="noopener" class="blink">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+      <div class="bc b3">
+        <div class="bc-in">
+          <span class="bnum">03</span>
+          <div>
+            <h3 class="btit">Async FastAPI</h3>
+            <p class="bdesc" data-k="p3">High-performance async REST API. Pydantic V2, SQLAlchemy, Alembic, full Pytest coverage.</p>
+            <div class="btags"><span class="btag">FastAPI</span><span class="btag">Async</span><span class="btag">Pytest</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="bc b4">
+        <div class="bc-in">
+          <span class="bnum" style="color:#000;">04</span>
+          <div>
+            <h3 class="btit" style="color:#000;">Speakta</h3>
+            <p class="bdesc" style="color:#000;" data-k="p4">NLP book analysis — sentiment scoring, visual reports, insight extraction from entire libraries.</p>
+            <div class="btags" style="color:#000;"><span class="btag">NLP</span><span class="btag">TextBlob</span><span class="btag">Matplotlib</span></div>
+          </div>
+        </div>
+        <a href="https://github.com/Primael-dev/Speakta.git" target="_blank" rel="noopener" class="blink" style="color:#000;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+      <div class="bc b5">
+        <div class="bc-in">
+          <span class="bnum">05</span>
+          <div>
+            <h3 class="btit">Presence App</h3>
+            <p class="bdesc" data-k="p5">Enterprise attendance system replacing manual check-ins. Deployed and live in production.</p>
+            <div class="btags"><span class="btag">Python</span><span class="btag">Production</span><span class="btag">Enterprise</span></div>
+          </div>
+        </div>
+        <span class="blive" data-k="plive">● Live</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quote">
+  <div class="w">
+    <blockquote class="qt" data-k="qtext">"Believing is a choice you make yourself — writing good code is too."</blockquote>
+    <div class="qa">
+      <div class="qln"></div>
+      <p class="qau"><span style="color:var(--lime)">Levi Ackerman</span>, Shingeki no Kyojin &nbsp;·&nbsp; Bankole Primaël William</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="w">
+    <p class="sl" data-k="sklbl">Expertise</p>
+    <h2 class="st" data-k="sktit">Stack</h2>
+    <div class="skg">
+      <div class="ski"><div class="skn">Python</div><div class="skl" data-k="li">Intermediate</div><div class="skb"><div class="skf" data-w="76"></div></div></div>
+      <div class="ski"><div class="skn">FastAPI</div><div class="skl" data-k="la">Advanced</div><div class="skb"><div class="skf" data-w="85"></div></div></div>
+      <div class="ski"><div class="skn">Flask</div><div class="skl" data-k="la">Advanced</div><div class="skb"><div class="skf" data-w="88"></div></div></div>
+      <div class="ski"><div class="skn">Django</div><div class="skl" data-k="la">Advanced</div><div class="skb"><div class="skf" data-w="82"></div></div></div>
+      <div class="ski"><div class="skn">Pandas</div><div class="skl" data-k="la">Advanced</div><div class="skb"><div class="skf" data-w="80"></div></div></div>
+      <div class="ski"><div class="skn">PostgreSQL</div><div class="skl" data-k="li">Intermediate</div><div class="skb"><div class="skf" data-w="70"></div></div></div>
+      <div class="ski"><div class="skn">SQLAlchemy</div><div class="skl" data-k="li">Intermediate</div><div class="skb"><div class="skf" data-w="74"></div></div></div>
+      <div class="ski"><div class="skn">BeautifulSoup</div><div class="skl" data-k="la">Advanced</div><div class="skb"><div class="skf" data-w="86"></div></div></div>
+      <div class="ski"><div class="skn">Pytest</div><div class="skl" data-k="li">Intermediate</div><div class="skb"><div class="skf" data-w="72"></div></div></div>
+      <div class="ski"><div class="skn">Git / GitHub</div><div class="skl" data-k="la">Advanced</div><div class="skb"><div class="skf" data-w="84"></div></div></div>
+      <div class="ski"><div class="skn">Laravel</div><div class="skl" data-k="ll">Learning</div><div class="skb"><div class="skf lm" data-w="28"></div></div></div>
+      <div class="ski"><div class="skn">Docker</div><div class="skl" data-k="ln">Notions</div><div class="skb"><div class="skf lm" data-w="22"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE ABOUT -->
+<section id="about">
+  <div class="w">
+    <h2 class="abh">A developer<br>from <span class="aba">Bénin.</span></h2>
+    <div class="abg">
+      <p class="abi" data-k="abint">Junior Python backend developer with a sharp sense of performance and architecture. Building APIs that are fast, readable, and production-ready.</p>
+      <div class="abm">
+        <div class="abav"><span class="avd"></span><span data-k="abav">Available for opportunities</span></div>
+        <div>
+          <div class="ablc">Sèmè-Kpodji, Bénin</div>
+          <div class="abls" data-k="abtg">Targeting startups worldwide</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="w">
+    <p class="sl" data-k="stlbl">Journey</p>
+    <h2 class="st" data-k="sttit">Formation</h2>
+    <div class="tl">
+      <div class="tli">
+        <div class="tly">2022 — 2025</div>
+        <div class="tlt">FLASH · Anglais Didactique</div>
+        <p class="tld" data-k="edu1">Adjarra, Bénin — Language foundation. Taught me to explain complex things simply.</p>
+      </div>
+      <div class="tli">
+        <div class="tly">2023 — 2025</div>
+        <div class="tlt">ESGIS · Informatique & Réseau</div>
+        <p class="tld" data-k="edu2">Cotonou, Bénin — Network, systems architecture, software engineering. Where theory met terminal.</p>
+      </div>
+      <div class="tli">
+        <div class="tly">2023 — now</div>
+        <div class="tlt" data-k="st1t">Self-taught Pythonist</div>
+        <p class="tld" data-k="st1d">Real projects. Qautomate, WeatherApp, enterprise attendance. Learning by building, shipping by choice.</p>
+      </div>
+      <div class="tli lb2">
+        <div class="tly">2025 +</div>
+        <div class="tlt" data-k="st2t">What's Next</div>
+        <p class="tld" data-k="st2d">Laravel, startup contributions, pushing the boundary of what's buildable from West Africa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="interests">
+  <div class="w">
+    <p class="sl" data-k="inlbl">Beyond Code</p>
+    <h2 class="st" data-k="intit">The Human</h2>
+    <div class="ing">
+      <div class="inc"><span class="ini">漫</span><h3 class="int" data-k="i1t">Manga</h3><p class="ind" data-k="i1d">Stories that push beyond limits. Attack on Titan taught me belief is always a choice.</p></div>
+      <div class="inc"><span class="ini">🎮</span><h3 class="int" data-k="i2t">Gaming</h3><p class="ind" data-k="i2d">Systems within systems. Games understand feedback loops better than most software products.</p></div>
+      <div class="inc"><span class="ini">✦</span><h3 class="int" data-k="i3t">Astronomy</h3><p class="ind" data-k="i3d">The cosmos as the ultimate distributed system — billions of parallel processes, governed by elegant laws.</p></div>
+      <div class="inc"><span class="ini">⚡</span><h3 class="int" data-k="i4t">Mythology</h3><p class="ind" data-k="i4d">Ancient documentation of the unknown. Every mythology is a civilization's attempt at a README for existence.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="philosophy">
+  <div class="w">
+    <p class="phj">「信じるのは自分の選択だ。」</p>
+    <blockquote class="phq">
+      <span data-k="ph1">Believing is a choice you make yourself.</span><br>
+      <span class="phl" data-k="ph2">Writing good code is too.</span>
+    </blockquote>
+    <div class="qa" style="margin-top:3.5rem;">
+      <div class="qln"></div>
+      <p class="qau" style="color:var(--g600);">Bankole Primaël William &nbsp;·&nbsp; <span data-k="phinsp">inspired by Levi Ackerman</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="numbers">
+  <div class="w">
+    <p class="sl" data-k="nblbl">In Numbers</p>
+    <h2 class="st" data-k="nbtit">Impact</h2>
+    <div class="nbg">
+      <div class="nbi"><div class="nbv">5<span>+</span></div><div class="nbl" data-k="nb1">Projects Shipped</div></div>
+      <div class="nbi"><div class="nbv">1<span>↑</span></div><div class="nbl" data-k="nb2">In Production</div></div>
+      <div class="nbi"><div class="nbv">∞</div><div class="nbl" data-k="nb3">Lines of Curiosity</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE CONTACT -->
+<section id="contact">
+  <div class="w">
+    <p class="sl" data-k="ctlbl">Get in touch</p>
+    <h2 class="cth">
+      <span data-k="ct1">Let's</span><br>
+      <span class="acc" data-k="ct2">work</span><br>
+      <span data-k="ct3">together.</span>
+    </h2>
+    <p class="cts" data-k="ctd">Looking for a backend developer who ships fast, tests thoroughly, and communicates clearly. If that's your startup, let's talk.</p>
+  </div>
+</section>
+
+<section id="cemail">
+  <div class="w">
+    <p class="sl" data-k="emlbl">Email</p>
+    <a id="em-a" href="#" class="el">
+      <span class="et" id="em-t">bankolewilli@gmail.com</span>
+      <span class="ei">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </span>
+    </a>
+  </div>
+</section>
+
+<section id="social">
+  <div class="w">
+    <p class="sl" data-k="soclbl">Networks</p>
+    <ul class="socl">
+      <li>
+        <a href="https://github.com/Primael-dev" target="_blank" rel="noopener" class="soca">
+          <div class="socll"><span class="socn">GitHub</span><span class="soch">@Primael-dev</span></div>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/prima%C3%ABl-m-william-bankole-011554398/" target="_blank" rel="noopener" class="soca">
+          <div class="socll"><span class="socn">LinkedIn</span><span class="soch">Primaël M. William Bankole</span></div>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://wa.me/22901404849510" target="_blank" rel="noopener" class="soca">
+          <div class="socll"><span class="socn">WhatsApp</span><span class="soch">+229 01 40 48 49 51</span></div>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="location">
+  <div class="w">
+    <p class="locl" data-k="loclbl">Based in</p>
+    <h2 class="locn">SÈMÈ-<br>KPODJI</h2>
+    <p class="locs"><span class="locd"></span><span data-k="locsub">Bénin, West Africa · GMT+1</span></p>
+  </div>
+</section>
+
+<footer>
+  <span class="ftc">© 2026 Conçu et Développé par Caleb_dev - UIX Designer et Développeur Frontend</span>
+  <span class="ftn">BPW</span>
+  <div class="ftck">
+    <span class="ftck-f">🇧🇯 Bénin · GMT+1</span>
+    <span id="ftt">--:--:--</span>
+    <span id="ftd">---</span>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script data-cfasync="false" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script data-cfasync="false" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script data-cfasync="false" src="main.js"></script>
+
+</body>
+</html>
