@@ -1,4 +1,4 @@
-/* === EMAIL : construit en JS pour éviter mon blocage par Cloudflare === */
+/* === EMAIL : construit en JS pour éviter l'obfuscation Cloudflare === */
 (function(){
   const u='bankolewilli',d='gmail.com';
   const a=document.getElementById('em-a');
@@ -140,6 +140,8 @@ function setLang(l){
 document.querySelectorAll('.lb').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.l)));
 
 /* === LENIS + GSAP : le smooth scroll et les animations === */
+const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+
 class Lenis{
   constructor(){
     this.target=window.scrollY;this.current=window.scrollY;
@@ -148,13 +150,6 @@ class Lenis{
       e.preventDefault();
       this.target=Math.max(0,Math.min(document.body.scrollHeight-window.innerHeight,this.target+e.deltaY));
     },{passive:false});
-    window.addEventListener('touchstart',e=>{this._touch=e.touches[0].clientY;},{passive:true});
-    window.addEventListener('touchmove',e=>{
-      if(this._touch===null)return;
-      const dy=this._touch-e.touches[0].clientY;
-      this._touch=e.touches[0].clientY;
-      this.target=Math.max(0,Math.min(document.body.scrollHeight-window.innerHeight,this.target+dy));
-    },{passive:true});
   }
   raf(){
     this.current+=(this.target-this.current)*0.095;
@@ -170,11 +165,30 @@ class Lenis{
   }
 }
 
-const lenis=new Lenis();
-gsap.registerPlugin(ScrollTrigger);
-gsap.ticker.add(()=>lenis.raf());
-gsap.ticker.lagSmoothing(0);
-lenis.on('scroll',ScrollTrigger.update);
+let lenis;
+if(isTouch){
+  /* Touch : scroll natif, pas de Lenis — zéro résistance */
+  lenis={
+    on:(ev,fn)=>{
+      if(ev==='scroll') window.addEventListener('scroll',()=>fn({scroll:window.scrollY}),{passive:true});
+    },
+    scrollTo:(el,{offset=0}={})=>{
+      if(typeof el==='string') el=document.querySelector(el);
+      if(!el) return;
+      const y=el.getBoundingClientRect().top+window.scrollY+offset;
+      window.scrollTo({top:y,behavior:'smooth'});
+    }
+  };
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.normalizeScroll(false);
+  window.addEventListener('scroll',ScrollTrigger.update,{passive:true});
+} else {
+  lenis=new Lenis();
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.ticker.add(()=>lenis.raf());
+  gsap.ticker.lagSmoothing(0);
+  lenis.on('scroll',ScrollTrigger.update);
+}
 
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
@@ -281,6 +295,7 @@ document.querySelectorAll('.bc').forEach(c=>{
 });
 
 (function(){
+  if(isTouch) return;
   const dot=document.getElementById('cd'),ring=document.getElementById('cr');
   if(!dot||!ring) return;
   let mx=-100,my=-100,rx=-100,ry=-100;
