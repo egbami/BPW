@@ -1,4 +1,4 @@
-# Pulse — Portfolio de Bankole Primaël William
+# — Portfolio de Bankole Primaël William
 
 [![Vercel Deployment](https://img.shields.io/badge/Deployer%20sur-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com)
 [![Expertise](https://img.shields.io/badge/Expertise-Python%20Backend-7D39EB?style=flat-square)](https://github.com/Primael-dev)
