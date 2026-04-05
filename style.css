@@ -18,14 +18,16 @@ body{background:var(--white);color:var(--black);font-family:var(--fm);overflow-x
   position:fixed;width:8px;height:8px;
   background:var(--white);
   border-radius:50%;pointer-events:none;z-index:9999;
-  top:0;left:0;transform:translate(-50%,-50%);
+  top:0;left:0;
+  will-change:transform;
   mix-blend-mode:difference;
 }
 #cr{
   position:fixed;width:38px;height:38px;
   border:1.5px solid var(--white);
   border-radius:50%;pointer-events:none;z-index:9998;
-  top:0;left:0;transform:translate(-50%,-50%);
+  top:0;left:0;
+  will-change:transform;
   transition:width .35s var(--ease),height .35s var(--ease);
   mix-blend-mode:difference;
 }
