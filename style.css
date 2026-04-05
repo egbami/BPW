@@ -135,9 +135,6 @@ body{background:var(--white);color:var(--black);font-family:var(--fm);overflow-x
 .ski:hover{background:var(--g50);}
 .skn{font-family:var(--fd);font-weight:700;font-size:.9rem;margin-bottom:.3rem;}
 .skl{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--g400);}
-.skb{margin-top:.7rem;height:2px;background:var(--g200);position:relative;}
-.skf{position:absolute;top:0;left:0;height:100%;background:var(--violet);width:0;}
-.skf.lm{background:var(--lime);}
 
 #about{padding:13rem 0 6rem;}
 .abh{font-family:var(--fd);font-weight:800;font-size:clamp(3rem,8vw,9rem);letter-spacing:-.05em;line-height:.88;}

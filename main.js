@@ -269,10 +269,6 @@ gsap.utils.toArray('.st').forEach(el=>gsap.from(el,{opacity:0,y:32,duration:1,ea
 gsap.from('.bc',{opacity:0,y:55,duration:.85,ease:'power3.out',stagger:.08,scrollTrigger:{trigger:'.bento',start:'top 82%'}});
 gsap.to('.qt',{y:-55,ease:'none',scrollTrigger:{trigger:'#quote',start:'top bottom',end:'bottom top',scrub:true}});
 
-ScrollTrigger.create({trigger:'#skills',start:'top 74%',once:true,onEnter:()=>{
-  document.querySelectorAll('.skf').forEach((el,i)=>gsap.to(el,{width:el.dataset.w+'%',duration:1.1,ease:'power3.out',delay:i*.04}));
-}});
-
 gsap.to('.abh',{y:-50,ease:'none',scrollTrigger:{trigger:'#about',start:'top bottom',end:'bottom top',scrub:true}});
 gsap.from('.tli',{opacity:0,x:-32,duration:.75,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'.tl',start:'top 83%'}});
 gsap.from('.inc',{opacity:0,y:32,duration:.7,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'.ing',start:'top 83%'}});
@@ -298,16 +294,24 @@ document.querySelectorAll('.bc').forEach(c=>{
   if(isTouch) return;
   const dot=document.getElementById('cd'),ring=document.getElementById('cr');
   if(!dot||!ring) return;
-  let mx=-100,my=-100,rx=-100,ry=-100;
+
+  let mx=window.innerWidth/2, my=window.innerHeight/2;
+  let rx=mx, ry=my;
+
+  // Dot suit la souris instantanément — pas de RAF, pas de lag
   document.addEventListener('mousemove',e=>{
-    mx=e.clientX;my=e.clientY;
-    dot.style.left=mx+'px';dot.style.top=my+'px';
-  });
+    mx=e.clientX; my=e.clientY;
+    dot.style.transform=`translate(calc(${mx}px - 50%), calc(${my}px - 50%))`;
+  }, {passive:true});
+
+  // Ring suit avec un léger retard via RAF
   (function loop(){
-    rx+=(mx-rx)*.1;ry+=(my-ry)*.1;
-    ring.style.left=rx+'px';ring.style.top=ry+'px';
+    rx+=(mx-rx)*.12;
+    ry+=(my-ry)*.12;
+    ring.style.transform=`translate(calc(${rx}px - 50%), calc(${ry}px - 50%))`;
     requestAnimationFrame(loop);
   })();
+
   document.querySelectorAll('a,button,.bc,.inc,.soca').forEach(el=>{
     el.addEventListener('mouseenter',()=>ring.classList.add('h'));
     el.addEventListener('mouseleave',()=>ring.classList.remove('h'));
