@@ -9,7 +9,7 @@
 }
 @media(max-width:768px){:root{--gutter:1.4rem;}}
 @media(max-width:480px){:root{--gutter:1.1rem;}}
-html{scroll-behavior:auto;}
+html{scroll-behavior:auto;overflow-x:hidden;}
 body{background:var(--white);color:var(--black);font-family:var(--fm);overflow-x:hidden;cursor:none;}
 ::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--black);}
 
@@ -103,9 +103,10 @@ body{background:var(--white);color:var(--black);font-family:var(--fm);overflow-x
 
 /* === PROJETS + ABOUT + CONTACT === */
 #projects{padding:8rem 0;}
-.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem;margin-top:4rem;}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem;margin-top:4rem;min-width:0;}
 .bc{border-radius:1.2rem;overflow:hidden;position:relative;transform-origin:center;}
 .bc-in{padding:2.4rem;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;height:100%;}
+.bc,.bc-in{min-width:0;}
 .b1{grid-column:span 7;background:var(--black);color:var(--white);}
 .b2{grid-column:span 5;background:var(--g50);border:1px solid var(--g200);}
 .b3{grid-column:span 4;background:var(--violet);color:var(--white);}
@@ -115,6 +116,7 @@ body{background:var(--white);color:var(--black);font-family:var(--fm);overflow-x
 .btit{font-family:var(--fd);font-weight:800;font-size:clamp(1.4rem,3vw,2.6rem);letter-spacing:-.03em;line-height:.95;margin-bottom:.7rem;}
 .bdesc{font-size:.76rem;line-height:1.65;opacity:.68;max-width:360px;}
 .btags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:1rem;}
+.btit,.bdesc,.btag,.tlt,.tld,.int,.ind,.socn,.soch,.et,.locn{overflow-wrap:anywhere;word-break:break-word;}
 .btag{font-size:.58rem;letter-spacing:.07em;text-transform:uppercase;padding:.2rem .65rem;border:1px solid currentColor;border-radius:999px;opacity:.55;}
 .blink{position:absolute;bottom:1.8rem;right:1.8rem;width:36px;height:36px;border:1px solid currentColor;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:inherit;opacity:.45;transition:opacity .3s;}
 .blink:hover{opacity:1;}
@@ -149,7 +151,7 @@ body{background:var(--white);color:var(--black);font-family:var(--fm);overflow-x
 .abls{font-size:.72rem;color:var(--g400);margin-top:.3rem;}
 
 #story{padding:6rem 0;background:var(--g50);}
-.tl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:4rem;}
+.tl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:4rem;min-width:0;}
 @media(max-width:900px){.tl{grid-template-columns:1fr;}}
 .tli{
   background:var(--white);
@@ -177,15 +179,21 @@ body{background:var(--white);color:var(--black);font-family:var(--fm);overflow-x
   }
 }
 @media(max-width:480px){
-  #story{padding:4.5rem 0;}
-  .tl{margin-top:2.5rem;gap:.85rem;}
-  .tli{padding:1.55rem 1.35rem;border-radius:.95rem;}
-  .tlt{font-size:.98rem;line-height:1.15;}
-  .tld{font-size:.72rem;line-height:1.6;}
+  #story{padding:4.25rem 0 4.75rem;}
+  .tl{margin-top:2rem;gap:.8rem;}
+  .tli{
+    padding:1.35rem 1.15rem;
+    border-radius:.9rem;
+    border:1px solid rgba(0,0,0,.04);
+    box-shadow:0 10px 24px rgba(0,0,0,.06);
+  }
+  .tly{margin-bottom:.55rem;font-size:.61rem;letter-spacing:.14em;}
+  .tlt{font-size:.95rem;line-height:1.2;margin-bottom:.4rem;}
+  .tld{font-size:.7rem;line-height:1.55;max-width:34ch;}
 }
 
 #interests{padding:8rem 0;}
-.ing{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:4rem;}
+.ing{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:4rem;min-width:0;}
 @media(max-width:580px){.ing{grid-template-columns:1fr;}}
 .inc{padding:2.8rem;border:1px solid var(--g200);border-radius:1.4rem;transition:border-color .3s,background .3s;}
 .inc:hover{border-color:var(--black);background:var(--g50);}
@@ -199,7 +207,7 @@ body{background:var(--white);color:var(--black);font-family:var(--fm);overflow-x
 .phl{color:var(--lime);}
 
 #numbers{padding:8rem 0;}
-.nbg{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--g200);margin-top:4rem;}
+.nbg{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--g200);margin-top:4rem;min-width:0;}
 @media(max-width:580px){.nbg{grid-template-columns:1fr;}}
 .nbi{padding:3.5rem 2.5rem;border-right:1px solid var(--g200);text-align:center;}
 .nbi:last-child{border-right:none;}

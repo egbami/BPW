@@ -141,6 +141,7 @@ document.querySelectorAll('.lb').forEach(b=>b.addEventListener('click',()=>setLa
 
 /* === LENIS + GSAP : le smooth scroll et les animations === */
 const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+const isNarrow = window.innerWidth < 900;
 
 class Lenis{
   constructor(){
@@ -270,7 +271,15 @@ gsap.from('.bc',{opacity:0,y:55,duration:.85,ease:'power3.out',stagger:.08,scrol
 gsap.to('.qt',{y:-55,ease:'none',scrollTrigger:{trigger:'#quote',start:'top bottom',end:'bottom top',scrub:true}});
 
 gsap.to('.abh',{y:-50,ease:'none',scrollTrigger:{trigger:'#about',start:'top bottom',end:'bottom top',scrub:true}});
-gsap.from('.tli',{opacity:0,x:-32,duration:.75,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'.tl',start:'top 83%'}});
+gsap.from('.tli',{
+  opacity:0,
+  x:(isTouch || isNarrow) ? 0 : -32,
+  y:(isTouch || isNarrow) ? 22 : 0,
+  duration:.75,
+  ease:'power3.out',
+  stagger:.1,
+  scrollTrigger:{trigger:'.tl',start:'top 83%'}
+});
 gsap.from('.inc',{opacity:0,y:32,duration:.7,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'.ing',start:'top 83%'}});
 gsap.to('.phq',{y:-50,ease:'none',scrollTrigger:{trigger:'#philosophy',start:'top bottom',end:'bottom top',scrub:true}});
 gsap.from('.phj',{opacity:0,y:16,duration:1,ease:'power3.out',scrollTrigger:{trigger:'#philosophy',start:'top 82%'}});
